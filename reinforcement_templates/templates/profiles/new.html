@@ -1,5 +1,12 @@
 {% extends 'base.html' %}
 {% block content %}
+  {% for object in field %}
+    <label for="{{ object }}">{{ object }}</label>
+    <input type="text" name="{{ object }}" id="{{ object }}" class="fancy_form" >
+  {% endfor %}
+{% endblock %}
+
+<!-- 
   <label for="email">email</label>
   <input type="text" name="email" id="email" class="fancy_form" >
 
@@ -17,4 +24,4 @@
 
   <label for="alias">alias</label>
   <input type="text" name="alias" id="alias" class="fancy_form" >
-{% endblock %}
+ -->
